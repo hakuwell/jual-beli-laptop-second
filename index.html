@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JB Leptop - Beranda | Laptop Second Bergaransi & Service Center</title>
+  <meta name="description" content="JB Leptop - Solusi laptop second berkualitas & service terpercaya di Jl.A.Yani Km 15.200." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ZONA 1: HEADER, TOPBAR & STICKY NAVBAR -->
+  <div class="store-header-banner">
+    <div class="container">
+      <h1>LAPTOP SECOND & SERVICE CENTER</h1>
+      <p>Solusi Laptop Bekas Berkualitas & Service Terpercaya</p>
+    </div>
+  </div>
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-item">
+        <i class="fa-solid fa-location-dot text-accent"></i> <span>Jl.A.Yani Km 15.200</span>
+        <span style="opacity: 0.4;">|</span>
+        <i class="fa-solid fa-shield-halved text-accent"></i> <span>Unit Bergaransi & Bebas Cek Sepuasnya</span>
+      </div>
+      <div class="topbar-item topbar-right">
+        <span><i class="fa-regular fa-clock"></i> Buka Setiap Hari: 09.00 - 20.00 WITA</span>
+        <a href="https://wa.me/6283867159578" target="_blank" class="topbar-link">
+          <i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">JB <span class="highlight">Leptop</span></span>
+          <span class="logo-subtitle">Second & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="katalog.html" class="nav-link">Katalog Laptop</a>
+        <a href="layanan.html" class="nav-link">Layanan & Booking</a>
+        <a href="layanan.html#jual-laptop" class="nav-link">Jual / Tukar Tambah</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#kontak" class="nav-link">Lokasi Toko</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" title="Ganti Mode Gelap / Terang" aria-label="Ganti Tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="layanan.html#booking-servis" class="btn btn-outline-primary btn-sm">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Booking Service
+        </a>
+        <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20tanya%20unit%20laptop%20atau%20layanan%20service" target="_blank" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Chat Admin
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ZONA 2: HERO SECTION & KEUNGGULAN UTAMA -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-tag"><i class="fa-solid fa-shield-halved"></i> Garansi Toko & Bebas Cek Sepuasnya</div>
+        <h2 class="hero-title">
+          Selamat Datang di <span class="gradient-text">JB Leptop</span> Laptop Second & Service Center
+        </h2>
+        <p class="hero-desc">
+          Kami menyediakan solusi beli laptop bekas berkualitas tanpa khawatir. Setiap unit sudah melalui <strong>pemeriksaan ketat</strong>, <strong>deep cleaning</strong>, dan <strong>repaste thermal pasta baru</strong> agar suhu tetap dingin dan performa maksimal.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="katalog.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-laptop"></i> Lihat Katalog Ready Stok
+          </a>
+          <a href="layanan.html" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-spray-can-sparkles"></i> Booking Service & Jual Laptop
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item"><h3 class="stat-number">100%</h3><p class="stat-label">Siap Pakai & Diuji</p></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><h3 class="stat-number">Gratis</h3><p class="stat-label">Cleaning & Repaste</p></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><h3 class="stat-number">Bergaransi</h3><p class="stat-label">Jaminan Toko Nyata</p></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card-main">
+          <img src="https://drive.google.com/thumbnail?id=1DE26hGuxhQSs4-ttrxIgcUBH7UENFekI&sz=w1000" alt="JB Leptop Workshop" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="container strip-grid">
+      <div class="strip-item">
+        <div class="strip-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div class="strip-text"><h4>Unit Bekas Berkualitas</h4><p>Lulus uji fungsi ketat & bergaransi toko.</p></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+        <div class="strip-text"><h4>Gratis Cleaning & Repaste</h4><p>Pembersihan debu total & pasta baru.</p></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon"><i class="fa-solid fa-sliders"></i></div>
+        <div class="strip-text"><h4>Custom Upgrade RAM/SSD</h4><p>Bisa request upgrade sebelum dikirim.</p></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="strip-text"><h4>OS & Software Siap Pakai</h4><p>Tinggal pakai untuk kerja, kuliah & gaming.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KENAPA PILIH KAMI (STANDAR QUALITY CONTROL) -->
+  <section class="section why-section" id="keunggulan">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag">Standar Quality Control</div>
+        <h2 class="section-title">Mengapa Beli dan Servis Laptop di Sini?</h2>
+        <p class="section-subtitle">Setiap unit laptop melewati 6 tahap pengecekan menyeluruh oleh teknisi kami sebelum dipajang di etalase.</p>
+      </div>
+
+      <div class="qc-grid">
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-display"></i></div>
+          <h4>Layar Bebas Minus</h4>
+          <p>Layar dicek bebas dead pixel, garis, dan flicker dengan warna jernih serta tajam.</p>
+        </div>
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-battery-three-quarters"></i></div>
+          <h4>Baterai Teruji Awet</h4>
+          <p>Kondisi baterai sehat dan diuji ketahanan daya pemakaian normal harian.</p>
+        </div>
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-keyboard"></i></div>
+          <h4>Keyboard & Touchpad Normal</h4>
+          <p>Semua tombol keyboard diuji satu per satu dan touchpad responsif multi-touch.</p>
+        </div>
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-temperature-half"></i></div>
+          <h4>Suhu Dingin & Repaste</h4>
+          <p>Heatsink dibersihkan dan dilapisi thermal paste baru agar bebas overheat.</p>
+        </div>
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-hard-drive"></i></div>
+          <h4>Kesehatan SSD 100%</h4>
+          <p>Kesehatan storage diuji menggunakan software diagnostik dengan baca/tulis cepat.</p>
+        </div>
+        <div class="qc-card">
+          <div class="qc-icon"><i class="fa-solid fa-wifi"></i></div>
+          <h4>Port & Konektivitas</h4>
+          <p>Port USB, HDMI, charger, audio jack, kamera, Wi-Fi, dan Bluetooth berfungsi normal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONA 3: FAQ ACCORDION, LOKASI & FOOTER -->
+  <section class="section faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Pertanyaan Sering Diajukan (FAQ)</h2>
+        <p class="section-subtitle">Jawaban cepat seputar pembelian laptop bekas, garansi, dan layanan servis kami.</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-header"><span>Apakah unit laptop bekas di JB Leptop memiliki garansi resmi toko?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p><strong>Ya, tentu!</strong> Setiap laptop mendapatkan Garansi Toko resmi 30 hingga 90 hari yang mencakup pengecekan mesin, perbaikan fungsi hardware non-human error, dan konsultasi gratis.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header"><span>Apakah unit bisa langsung dipakai untuk kuliah atau kerja?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p><strong>Siap pakai 100%!</strong> Semua laptop sudah terinstal Windows, driver resmi, serta aplikasi standar (Office, Browser, PDF, Zoom) dan sudah melalui deep cleaning.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header"><span>Bagaimana prosedur jika saya ingin melakukan tukar tambah atau jual laptop?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Silakan buka halaman <a href="layanan.html#jual-laptop" class="text-primary"><strong>Layanan & Booking</strong></a>, isi form spesifikasi laptop Anda untuk mendapat estimasi harga cepat via WhatsApp, lalu bawa unit ke workshop kami.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header"><span>Berapa lama pengerjaan Deep Cleaning & Thermal Repaste?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="accordion-body">
+            <p>Pengerjaan memakan waktu sekitar <strong>45 hingga 90 menit</strong> dan <strong>bisa ditunggu</strong> langsung di workshop kami dengan prinsip <em>No Fix, No Fee</em> untuk servis kerusakan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI & KONTAK -->
+  <section class="section contact-section" id="kontak">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-info">
+          <h2 class="contact-title">Lokasi & Kontak JB Leptop</h2>
+          <p class="contact-desc">Silakan mampir langsung ke workshop kami untuk mengecek unit laptop sepuasnya atau konsultasi kerusakan dengan teknisi.</p>
+          <div class="info-list">
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><strong>Alamat Workshop:</strong><p>Jl.A.Yani Km 15.200</p></div></div>
+            <div class="info-item"><i class="fa-regular fa-clock"></i><div><strong>Jam Operasional:</strong><p>Buka Setiap Hari: 09.00 - 20.00 WITA</p></div></div>
+            <div class="info-item"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp Resmi:</strong><p>+62 838-6715-9578 (Respon Cepat)</p></div></div>
+          </div>
+          <div class="contact-buttons">
+            <a href="https://goo.gl/maps/sKbEV9jcavszbHpw8?g_st=ac" target="_blank" class="btn btn-outline-primary"><i class="fa-solid fa-map-location-dot"></i> Buka Google Maps</a>
+            <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20tanya%20alamat%20dan%20stok%20laptop" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Hubungi via WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-cta-card">
+          <h3>Cari Laptop Siap Pakai?</h3>
+          <p>Cek seluruh koleksi laptop bisnis, kuliah, dan gaming di halaman Katalog kami.</p>
+          <a href="katalog.html" class="btn btn-primary btn-block"><i class="fa-solid fa-laptop"></i> Buka Halaman Katalog</a>
+          <a href="layanan.html" class="btn btn-secondary btn-block" style="margin-top: 10px;"><i class="fa-solid fa-screwdriver-wrench"></i> Buka Halaman Servis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER RESMI -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="logo-text"><span class="logo-title text-white">JB <span style="color: #ffedd5;">Leptop</span></span></div>
+        </div>
+        <p class="footer-desc">Solusi laptop bekas berkualitas dan service center terpercaya di Jl.A.Yani Km 15.200. Garansi toko & bebas cek unit.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kategori Katalog</h4>
+        <ul class="footer-links">
+          <li><a href="katalog.html?category=office" onclick="return filterByTag('office')">Laptop Kuliah & Kerja</a></li>
+          <li><a href="katalog.html?category=business" onclick="return filterByTag('business')">Seri Bisnis (ThinkPad / Dell)</a></li>
+          <li><a href="katalog.html?category=gaming" onclick="return filterByTag('gaming')">Laptop Gaming & Desain</a></li>
+          <li><a href="katalog.html?category=budget" onclick="return filterByTag('budget')">Budget di Bawah 3 Juta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Layanan Bengkel</h4>
+        <ul class="footer-links">
+          <li><a href="layanan.html#layanan">Deep Cleaning & Repaste</a></li>
+          <li><a href="layanan.html#layanan">Perbaikan Hardware & LCD</a></li>
+          <li><a href="layanan.html#layanan">Upgrade RAM & SSD NVMe</a></li>
+          <li><a href="layanan.html#jual-laptop">Jual / Tukar Tambah Laptop</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kontak & Lokasi</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot"></i> Jl.A.Yani Km 15.200</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578</li>
+          <li><i class="fa-regular fa-clock"></i> 09.00 - 20.00 WITA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 JB Leptop - Laptop Second & Service Center. All Rights Reserved.</p>
+        <p class="footer-credit">Halaman: Beranda | Katalog | Layanan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20konsultasi%20laptop%20atau%20service" target="_blank" class="floating-wa">
+    <i class="fa-brands fa-whatsapp"></i><span class="floating-wa-label">Konsultasi WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan Service, Booking & Tukar Tambah - JB Leptop</title>
+  <meta name="description" content="Layanan service laptop, deep cleaning repaste thermal, upgrade RAM/SSD, dan jual/tukar tambah laptop bekas di JB Leptop." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ZONA 1: HEADER, TOPBAR & STICKY NAVBAR -->
+  <div class="store-header-banner">
+    <div class="container">
+      <h1>LAYANAN SERVICE, BOOKING & JUAL BELI</h1>
+      <p>Teknisi Berpengalaman, Transparan, Bisa Ditunggu & Prinsip No Fix No Fee</p>
+    </div>
+  </div>
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-item">
+        <i class="fa-solid fa-location-dot text-accent"></i> <span>Jl.A.Yani Km 15.200</span>
+        <span style="opacity: 0.4;">|</span>
+        <i class="fa-solid fa-shield-halved text-accent"></i> <span>Pengecekan Awal Gratis (No Fix No Fee)</span>
+      </div>
+      <div class="topbar-item topbar-right">
+        <span><i class="fa-regular fa-clock"></i> Buka Setiap Hari: 09.00 - 20.00 WITA</span>
+        <a href="https://wa.me/6283867159578" target="_blank" class="topbar-link">
+          <i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">JB <span class="highlight">Leptop</span></span>
+          <span class="logo-subtitle">Second & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="katalog.html" class="nav-link">Katalog Laptop</a>
+        <a href="layanan.html" class="nav-link active">Layanan & Booking</a>
+        <a href="#jual-laptop" class="nav-link">Jual / Tukar Tambah</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html#kontak" class="nav-link">Lokasi Toko</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" title="Ganti Mode Gelap / Terang" aria-label="Ganti Tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#booking-servis" class="btn btn-outline-primary btn-sm">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Booking Service
+        </a>
+        <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20konsultasi%20servis%20laptop" target="_blank" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Chat Admin
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ZONA 3: DAFTAR LAYANAN SERVIS & AUTO-SELECT -->
+  <section class="section services-section" id="layanan">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Bengkel Spesialis Laptop</div>
+        <h2 class="section-title">Layanan Service & Maintenance JB Leptop</h2>
+        <p class="section-subtitle">
+          Klik tombol pada kartu layanan di bawah untuk otomatis memilih jenis layanan pada Formulir Booking Servis.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Layanan 1: Deep Cleaning -->
+        <div class="service-card">
+          <div class="service-icon-box"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+          <h3 class="service-title">Deep Cleaning & Thermal Repaste</h3>
+          <p class="service-desc">Solusi untuk laptop cepat panas, kipas berdengung bising, atau sering mati mendadak saat beban berat.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Pembersihan total debu fan, heatsink & kisi udara</li>
+            <li><i class="fa-solid fa-check"></i> Ganti Thermal Paste kualitas tinggi (Arctic MX-4)</li>
+            <li><i class="fa-solid fa-check"></i> Pembersihan port USB, keyboard & body luar</li>
+            <li><i class="fa-solid fa-check"></i> Stress test uji suhu sebelum & sesudah servis</li>
+          </ul>
+          <div class="service-pricing">
+            <span class="price-label">Biaya mulai dari</span>
+            <div class="price-val">Rp 100.000 <span class="price-unit">/ unit</span></div>
+          </div>
+          <a href="#booking-servis" class="btn btn-outline-primary btn-block" onclick="selectServiceOption('Deep Cleaning & Thermal Repaste')">
+            Booking Deep Cleaning
+          </a>
+        </div>
+
+        <!-- Layanan 2: Hardware Repair -->
+        <div class="service-card">
+          <div class="service-icon-box"><i class="fa-solid fa-tools"></i></div>
+          <h3 class="service-title">Perbaikan Hardware & Komponen</h3>
+          <p class="service-desc">Mengatasi kerusakan fisik maupun kelistrikan laptop dengan sparepart berkualitas dan bergaransi.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Ganti Layar LCD (Pecah, Garis, Blank, Flicker)</li>
+            <li><i class="fa-solid fa-check"></i> Ganti Baterai Drop & Keyboard Error/Macet</li>
+            <li><i class="fa-solid fa-check"></i> Reparasi Engsel Patah & Dudukan Casing</li>
+            <li><i class="fa-solid fa-check"></i> Servis Motherboard, IC Power & Mati Total</li>
+          </ul>
+          <div class="service-pricing">
+            <span class="price-label">Pengecekan awal</span>
+            <div class="price-val">GRATIS <span class="price-unit">(No Fix No Fee)</span></div>
+          </div>
+          <a href="#booking-servis" class="btn btn-outline-primary btn-block" onclick="selectServiceOption('Ganti Layar LCD')">
+            Konsultasi Kerusakan
+          </a>
+        </div>
+
+        <!-- Layanan 3: Upgrade RAM/SSD -->
+        <div class="service-card">
+          <div class="service-icon-box"><i class="fa-solid fa-rocket"></i></div>
+          <h3 class="service-title">Custom Upgrade RAM/SSD & OS</h3>
+          <p class="service-desc">Bikin performa laptop lama kembali ngebut untuk multitasking tanpa harus membeli laptop baru.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Pasang SSD M.2 NVMe / SATA (Booting cepat)</li>
+            <li><i class="fa-solid fa-check"></i> Tambah RAM Dual-Channel DDR4 / DDR5</li>
+            <li><i class="fa-solid fa-check"></i> Instal Ulang Windows 10/11 & Driver Resmi</li>
+            <li><i class="fa-solid fa-check"></i> Instalasi Office, aplikasi kuliah & desain</li>
+          </ul>
+          <div class="service-pricing">
+            <span class="price-label">Biaya jasa mulai dari</span>
+            <div class="price-val">Rp 75.000 <span class="price-unit">/ pengerjaan</span></div>
+          </div>
+          <a href="#booking-servis" class="btn btn-outline-primary btn-block" onclick="selectServiceOption('Upgrade RAM & SSD')">
+            Pilih Upgrade Ini
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM BOOKING SERVIS & CLEANING -->
+  <section class="section booking-section" id="booking-servis">
+    <div class="container">
+      <div class="booking-card">
+        <div class="booking-grid">
+          <div class="booking-content">
+            <div class="badge-tag">Booking Mudah & Cepat</div>
+            <h2 class="section-title text-white">Booking Service & Deep Cleaning</h2>
+            <p class="booking-desc">
+              Daftarkan laptop Anda terlebih dahulu agar teknisi kami menyiapkan slot meja kerja dan sparepart sebelum Anda tiba di workshop.
+            </p>
+            <div class="booking-perks">
+              <div class="perk-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <div><strong>Bisa Ditunggu</strong><span>Untuk pengerjaan cleaning, ganti baterai, keyboard, dan upgrade RAM/SSD.</span></div>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-video"></i>
+                <div><strong>Dokumentasi Transparan</strong><span>Kondisi dalam laptop dan proses pembersihan difoto secara terbuka.</span></div>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <div><strong>No Fix No Fee</strong><span>Pengecekan gratis, tanpa biaya jika unit batal atau tidak bisa diperbaiki.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-form-wrapper">
+            <form id="bookingForm" class="booking-form">
+              <h3 class="form-title text-white"><i class="fa-solid fa-calendar-check text-accent"></i> Formulir Booking Service</h3>
+              <div class="form-group">
+                <label for="bookName">Nama Lengkap</label>
+                <input type="text" id="bookName" class="form-control" placeholder="Nama Anda" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookPhone">Nomor WhatsApp</label>
+                  <input type="tel" id="bookPhone" class="form-control" placeholder="Contoh: 083867159578" required />
+                </div>
+                <div class="form-group">
+                  <label for="bookServiceType">Layanan yang Dibutuhkan</label>
+                  <select id="bookServiceType" class="form-control" required>
+                    <option value="Deep Cleaning & Thermal Repaste">Deep Cleaning & Thermal Repaste</option>
+                    <option value="Ganti Layar LCD">Ganti Layar LCD (Pecah/Garis)</option>
+                    <option value="Ganti Baterai / Keyboard">Ganti Baterai / Keyboard</option>
+                    <option value="Reparasi Engsel & Body">Reparasi Engsel & Casing Body</option>
+                    <option value="Upgrade RAM & SSD">Custom Upgrade RAM & SSD</option>
+                    <option value="Laptop Mati Total / Kena Air">Laptop Mati Total / Kena Air</option>
+                    <option value="Install Ulang & Optimasi">Install Ulang Windows & Optimasi</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookLaptopModel">Merk & Tipe Laptop</label>
+                  <input type="text" id="bookLaptopModel" class="form-control" placeholder="Contoh: ASUS TUF / ThinkPad T480" required />
+                </div>
+                <div class="form-group">
+                  <label for="bookMethod">Metode Pengerjaan</label>
+                  <select id="bookMethod" class="form-control" required>
+                    <option value="Antar Sendiri ke Toko (Jl.A.Yani Km 15.200)">Antar ke Toko (Bisa Ditunggu)</option>
+                    <option value="Kirim via Ojek Online (GoSend / Grab)">Kirim via Ojek Online</option>
+                    <option value="Kirim via Ekspedisi">Kirim via Ekspedisi</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="bookSymptoms">Keluhan Detail / Catatan</label>
+                <textarea id="bookSymptoms" class="form-control" rows="3" placeholder="Ceritakan keluhan laptop Anda (misal: suhu cepat panas 90C saat main game)" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-accent btn-block btn-lg">
+                <i class="fa-brands fa-whatsapp"></i> Konfirmasi Booking via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM JUAL / TUKAR TAMBAH LAPTOP -->
+  <section class="section sell-section" id="jual-laptop">
+    <div class="container">
+      <div class="sell-wrapper">
+        <div class="sell-info">
+          <div class="badge-tag">Punya Laptop Menganggur?</div>
+          <h2 class="sell-title">Jual Laptop Bekas Anda atau Tukar Tambah ke Unit Baru!</h2>
+          <p class="sell-desc">
+            Kami menerima jual beli dan tukar tambah laptop second dengan taksiran harga jujur, transparan, dan pencairan tunai/transfer langsung di tempat.
+          </p>
+          <div class="sell-steps">
+            <div class="sell-step-item"><div class="step-num">1</div><div><strong>Kirim Rincian Laptop</strong><p>Isi merk, tipe, spesifikasi, dan kondisi fisik pada formulir di samping.</p></div></div>
+            <div class="sell-step-item"><div class="step-num">2</div><div><strong>Taksiran Harga Cepat</strong><p>Admin memberikan estimasi penawaran harga terbaik via WhatsApp.</p></div></div>
+            <div class="sell-step-item"><div class="step-num">3</div><div><strong>Cek Unit & Cair Langsung</strong><p>Bawa ke toko di Jl.A.Yani Km 15.200, cek fisik singkat & langsung cair.</p></div></div>
+          </div>
+        </div>
+
+        <div class="sell-form-card">
+          <h3 class="form-title"><i class="fa-solid fa-hand-holding-dollar text-primary"></i> Form Estimasi Jual / Tukar Tambah</h3>
+          <p class="form-sub">Isi data singkat laptop Anda untuk mendapatkan penawaran harga:</p>
+          <form id="sellLaptopForm">
+            <div class="form-group">
+              <label for="sellType">Jenis Transaksi</label>
+              <select id="sellType" class="form-control" required>
+                <option value="Jual Langsung (Uang Tunai)">Jual Langsung (Dapat Uang Tunai)</option>
+                <option value="Tukar Tambah ke Laptop Lain">Tukar Tambah ke Laptop di JB Leptop</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sellBrand">Merk Laptop</label>
+                <input type="text" id="sellBrand" class="form-control" placeholder="Lenovo, Asus, Acer, Dell..." required />
+              </div>
+              <div class="form-group">
+                <label for="sellModel">Tipe / Model</label>
+                <input type="text" id="sellModel" class="form-control" placeholder="ThinkPad T480 / VivoBook 14" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sellSpecs">Spesifikasi Singkat (Processor, RAM, SSD)</label>
+              <input type="text" id="sellSpecs" class="form-control" placeholder="Core i5 Gen 8, RAM 8GB, SSD 256GB" required />
+            </div>
+            <div class="form-group">
+              <label for="sellCondition">Kondisi & Kelengkapan</label>
+              <textarea id="sellCondition" class="form-control" rows="2" placeholder="Fisik 90% mulus, baterai normal, charger ori..." required></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sellTargetPrice">Ekspektasi Harga (Opsional)</label>
+                <input type="text" id="sellTargetPrice" class="form-control" placeholder="Contoh: Rp 3.000.000" />
+              </div>
+              <div class="form-group">
+                <label for="sellCity">Kota / Lokasi</label>
+                <input type="text" id="sellCity" class="form-control" placeholder="Banjarbaru / Banjarmasin" required />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> Dapatkan Penawaran via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER RESMI -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="logo-text"><span class="logo-title text-white">JB <span style="color: #ffedd5;">Leptop</span></span></div>
+        </div>
+        <p class="footer-desc">Solusi laptop bekas berkualitas dan service center terpercaya di Jl.A.Yani Km 15.200. Garansi toko & bebas cek unit.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kategori Katalog</h4>
+        <ul class="footer-links">
+          <li><a href="katalog.html?category=office" onclick="return filterByTag('office')">Laptop Kuliah & Kerja</a></li>
+          <li><a href="katalog.html?category=business" onclick="return filterByTag('business')">Seri Bisnis (ThinkPad / Dell)</a></li>
+          <li><a href="katalog.html?category=gaming" onclick="return filterByTag('gaming')">Laptop Gaming & Desain</a></li>
+          <li><a href="katalog.html?category=budget" onclick="return filterByTag('budget')">Budget di Bawah 3 Juta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Layanan Bengkel</h4>
+        <ul class="footer-links">
+          <li><a href="#layanan">Deep Cleaning & Repaste</a></li>
+          <li><a href="#layanan">Perbaikan Hardware & LCD</a></li>
+          <li><a href="#layanan">Upgrade RAM & SSD NVMe</a></li>
+          <li><a href="#jual-laptop">Jual / Tukar Tambah Laptop</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kontak & Lokasi</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot"></i> Jl.A.Yani Km 15.200</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578</li>
+          <li><i class="fa-regular fa-clock"></i> 09.00 - 20.00 WITA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 JB Leptop - Laptop Second & Service Center. All Rights Reserved.</p>
+        <p class="footer-credit">Halaman: Beranda | Katalog | Layanan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20konsultasi%20servis%20atau%20jual%20laptop" target="_blank" class="floating-wa">
+    <i class="fa-brands fa-whatsapp"></i><span class="floating-wa-label">Konsultasi WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

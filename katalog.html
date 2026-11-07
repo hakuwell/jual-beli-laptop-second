@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Laptop Bekas - JB Leptop | Ready Stok Bergaransi</title>
+  <meta name="description" content="Katalog laptop bekas berkualitas JB Leptop. Cari laptop bisnis, kuliah, gaming, dan budget murah bergaransi toko." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ZONA 1: HEADER, TOPBAR & STICKY NAVBAR -->
+  <div class="store-header-banner">
+    <div class="container">
+      <h1>KATALOG LAPTOP SECOND READY STOK</h1>
+      <p>Semua Unit Lulus Quality Control, Gratis Deep Cleaning & Bergaransi Toko</p>
+    </div>
+  </div>
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-item">
+        <i class="fa-solid fa-location-dot text-accent"></i> <span>Jl.A.Yani Km 15.200</span>
+        <span style="opacity: 0.4;">|</span>
+        <i class="fa-solid fa-shield-halved text-accent"></i> <span>Unit Bergaransi & Bebas Cek Sepuasnya</span>
+      </div>
+      <div class="topbar-item topbar-right">
+        <span><i class="fa-regular fa-clock"></i> Buka Setiap Hari: 09.00 - 20.00 WITA</span>
+        <a href="https://wa.me/6283867159578" target="_blank" class="topbar-link">
+          <i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">JB <span class="highlight">Leptop</span></span>
+          <span class="logo-subtitle">Second & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="katalog.html" class="nav-link active">Katalog Laptop</a>
+        <a href="layanan.html" class="nav-link">Layanan & Booking</a>
+        <a href="layanan.html#jual-laptop" class="nav-link">Jual / Tukar Tambah</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html#kontak" class="nav-link">Lokasi Toko</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" title="Ganti Mode Gelap / Terang" aria-label="Ganti Tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="layanan.html#booking-servis" class="btn btn-outline-primary btn-sm">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Booking Service
+        </a>
+        <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20tanya%20stok%20katalog%20laptop" target="_blank" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Chat Admin
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ZONA 2: KATALOG LAPTOP, FILTER KATEGORI, SEARCH REAL-TIME & MODAL -->
+  <section class="section catalog-section" id="katalog">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fa-solid fa-laptop"></i> Etalase Unit Pilihan</div>
+        <h2 class="section-title">Katalog Laptop Bekas JB Leptop</h2>
+        <p class="section-subtitle">
+          Gunakan tombol kategori atau kolom pencarian real-time untuk menemukan laptop yang sesuai dengan kebutuhan kerja, kuliah, maupun gaming Anda.
+        </p>
+      </div>
+
+      <!-- Filter Controls & Real-Time Search -->
+      <div class="catalog-controls">
+        <div class="filter-categories" id="filterCategories">
+          <button class="filter-btn active" data-category="all">Semua Unit</button>
+          <button class="filter-btn" data-category="office">Office & Kuliah</button>
+          <button class="filter-btn" data-category="business">Bisnis (ThinkPad / Dell)</button>
+          <button class="filter-btn" data-category="gaming">Gaming & Desain</button>
+          <button class="filter-btn" data-category="budget">Budget &lt; 3 Juta</button>
+        </div>
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="laptopSearch" placeholder="Cari tipe, Intel/Ryzen, RAM..." />
+        </div>
+      </div>
+
+      <!-- Wadah Etalase Dinamis (Dirender oleh renderLaptops di script.js) -->
+      <div class="laptop-grid" id="laptopGrid"></div>
+
+      <!-- Kotak Request Unit -->
+      <div class="catalog-notice">
+        <div class="notice-icon"><i class="fa-solid fa-circle-info"></i></div>
+        <div class="notice-text">
+          <strong>Mencari tipe spesifik atau ingin custom upgrade RAM/SSD?</strong> Hubungi admin JB Leptop via WhatsApp untuk cek stok gudang terbaru!
+        </div>
+        <a href="https://wa.me/6283867159578?text=Halo%20Admin%20JB%20Leptop,%20apakah%20ada%20rekomendasi%20laptop%20dengan%20budget%20..." target="_blank" class="btn btn-sm btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Request Unit ke Admin
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DETAIL PRODUK LAPTOP -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ZONA 3: FOOTER RESMI & REMOTE FILTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="logo-text"><span class="logo-title text-white">JB <span style="color: #ffedd5;">Leptop</span></span></div>
+        </div>
+        <p class="footer-desc">Solusi laptop bekas berkualitas dan service center terpercaya di Jl.A.Yani Km 15.200. Garansi toko & bebas cek unit.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Filter Cepat Katalog</h4>
+        <ul class="footer-links">
+          <li><a href="#katalog" onclick="return filterByTag('office')">Laptop Kuliah & Kerja</a></li>
+          <li><a href="#katalog" onclick="return filterByTag('business')">Seri Bisnis (ThinkPad / Dell)</a></li>
+          <li><a href="#katalog" onclick="return filterByTag('gaming')">Laptop Gaming & Desain</a></li>
+          <li><a href="#katalog" onclick="return filterByTag('budget')">Budget di Bawah 3 Juta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Layanan Bengkel</h4>
+        <ul class="footer-links">
+          <li><a href="layanan.html#layanan">Deep Cleaning & Repaste</a></li>
+          <li><a href="layanan.html#layanan">Perbaikan Hardware & LCD</a></li>
+          <li><a href="layanan.html#layanan">Upgrade RAM & SSD NVMe</a></li>
+          <li><a href="layanan.html#jual-laptop">Jual / Tukar Tambah Laptop</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kontak & Lokasi</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot"></i> Jl.A.Yani Km 15.200</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +62 838-6715-9578</li>
+          <li><i class="fa-regular fa-clock"></i> 09.00 - 20.00 WITA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 JB Leptop - Laptop Second & Service Center. All Rights Reserved.</p>
+        <p class="footer-credit">Halaman: Beranda | Katalog | Layanan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6283867159578?text=Halo%20JB%20Leptop,%20saya%20mau%20tanya%20unit%20di%20katalog" target="_blank" class="floating-wa">
+    <i class="fa-brands fa-whatsapp"></i><span class="floating-wa-label">Konsultasi WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
